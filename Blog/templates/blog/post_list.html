@@ -2,7 +2,7 @@
 {% block content %}
 
   {% for post in post_list %}
-    <h1><a class="titles" href="{% url 'detail' pk=post.pk %}">{{post.title}}</a></h1>
+    <h1><a class="titles" href="{% url 'detail' pk=post.pk %}">{{post.title}}<br> [{{post.author}}]</a></h1>
     <p>{{post.published_date}}</p>
     <a class="titles" href="{% url 'detail' pk=post.pk %}">Comments</a>
   {% endfor %}
